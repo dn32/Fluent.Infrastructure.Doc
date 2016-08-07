@@ -1,9 +1,9 @@
-<img src="https://github.com/dn32/Fluent.Infrastructure/blob/master/Docs/logo/logo.png" alt="Fluent Infrastructure">
+<img src="https://github.com/dn32/Fluent.Infrastructure.Doc/blob/master/Docs/logo/logo.png" alt="Fluent Infrastructure">
 ================================
 
 <img src="http://proximo.pro:8080/app/rest/builds/buildType:(id:FluentInfrastructure_Build)/statusIcon"/>
 
-[<img src="https://github.com/dn32/Fluent.Infrastructure/blob/master/Docs/Flowchart%20activity%20of%20basic%20implementation.png" alt="Flowchart activity of basic implementation">](https://raw.githubusercontent.com/dn32/Fluent.Infrastructure/master/Docs/Flowchart%20activity%20of%20basic%20implementation.png)
+[<img src="https://github.com/dn32/Fluent.Infrastructure.Doc/blob/master/Docs/Flowchart%20activity%20of%20basic%20implementation.png" alt="Flowchart activity of basic implementation">](https://raw.githubusercontent.com/dn32/Fluent.Infrastructure/master/Docs/Flowchart%20activity%20of%20basic%20implementation.png)
 
 Basic implementation
 
@@ -36,5 +36,5 @@ How do I get started?
     
 --------------------------------
 
-[<img src="https://github.com/dn32/Fluent.Infrastructure/blob/master/Docs/Flowchart%20activity%20of%20advanced%20implementation.png" alt="Flowchart activity of advanced implementation">](https://raw.githubusercontent.com/dn32/Fluent.Infrastructure/master/Docs/Flowchart%20activity%20of%20advanced%20implementation.png)
+[<img src="https://github.com/dn32/Fluent.Infrastructure.Doc/blob/master/Docs/Flowchart%20activity%20of%20advanced%20implementation.png" alt="Flowchart activity of advanced implementation">](https://raw.githubusercontent.com/dn32/Fluent.Infrastructure/master/Docs/Flowchart%20activity%20of%20advanced%20implementation.png)
 Advanced implementation
