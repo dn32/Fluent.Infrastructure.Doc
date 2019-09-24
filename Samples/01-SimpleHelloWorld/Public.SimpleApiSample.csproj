@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <PublishTrimmed>true</PublishTrimmed>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>Public.SimpleApiSample.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="sample.db" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Fluent.Architecture.Core" Version="2.0.0.3" />
+    <PackageReference Include="Fluent.Architecture.Core.Doc" Version="1.0.0.2" />
+    <PackageReference Include="Fluent.Architecture.EntityFramework" Version="2.0.0.2" />
+    <PackageReference Include="Fluent.Architecture.EntityFramework.SqLite" Version="2.0.0" />
+  </ItemGroup>
+
+</Project>
