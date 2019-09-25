@@ -4,11 +4,10 @@
     <TargetFramework>netcoreapp3.0</TargetFramework>
     <PublishTrimmed>true</PublishTrimmed>
     <SignAssembly>true</SignAssembly>
-    <AssemblyOriginatorKeyFile>Public.SimpleApiSample.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="sample.db" />
+    <None Remove="SimpleHelloWorld.db" />
   </ItemGroup>
 
   <ItemGroup>

@@ -30,7 +30,7 @@ public class Startup
         services
             .AddFluentArchitecture()
             .UseEntityFramework()
-            .AddConnectionString("Data Source=SimpleHelloWorld.db;", createDatabaseIfNotExists: true, typeof(EfContextSqLite))
+            .AddConnectionString("Data Source=sample.db;", createDatabaseIfNotExists: true, typeof(EfContextSqLite))
             .Build()
             .AddFluentDoc();
 

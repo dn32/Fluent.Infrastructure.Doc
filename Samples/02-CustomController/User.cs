@@ -1,7 +1,7 @@
 ﻿using Fluent.Architecture.Entities;
 using System.ComponentModel.DataAnnotations;
 
-namespace SimpleHelloWorld
+namespace CustomController
 {
     /* 3. Example entity */
     public class User : FluentEntity

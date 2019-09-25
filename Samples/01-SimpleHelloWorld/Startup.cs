@@ -7,7 +7,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Newtonsoft.Json.Serialization;
 
-namespace Public.SimpleApiSample
+namespace SimpleHelloWorld
 {
 public class Startup
 {
@@ -17,7 +17,7 @@ public class Startup
         services
                 .AddFluentArchitecture()
                 .UseEntityFramework()
-                .AddConnectionString("Data Source=sample.db;", createDatabaseIfNotExists: true, typeof(EfContextSqLite))
+                .AddConnectionString("Data Source=SimpleHelloWorld.db;", createDatabaseIfNotExists: true, typeof(EfContextSqLite))
                 .Build()
                 .AddFluentDoc();
 
