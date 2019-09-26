@@ -1,0 +1,53 @@
+﻿[
+  {
+    "email": "test01@test.com.br",
+    "name": "Maria",
+    "code": 1,
+    "adress": {
+      "adress": "Wall Street 5845"
+    },
+    "userAuthorizations": [
+      { "authName": "Customers" },
+      { "authName": "Companies" },
+      { "authName": "Branches" },
+      { "authName": "Users" }
+    ]
+  },
+  {
+    "email": "test02@test.com.br",
+    "name": "Pedro",
+    "code": 2,
+    "adress": {
+      "adress": "Teste 123"
+    },
+    "userAuthorizations": [
+      { "authName": "Customers" },
+      { "authName": "Companies" }
+    ]
+  },
+  {
+    "email": "test03@test.com.br",
+    "name": "Felipe",
+    "code": 3,
+    "userAuthorizations": []
+  },
+  {
+    "Code": 45,
+    "Email": "test04@test.com.br",
+    "Name": "Maria4",
+    "adress": {
+      "adress": "Wall Street 4"
+    },
+    "UserAuthorizations": [
+      {
+        "AuthName": "Branches alter"
+      },
+      {
+        "AuthName": "Users"
+      },
+      {
+        "AuthName": "Equipment"
+      }
+    ]
+  }
+]

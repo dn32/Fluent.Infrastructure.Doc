@@ -19,6 +19,13 @@ namespace CustomSpecification
         {
             return query.Where(x => x.Age >= MinAge && x.Age <= MaxAge);
         }
+
+        public override IOrderedQueryable<User> Order(IQueryable<User> query)
+        {
+            return query.OrderBy(x => x.Name);
+        }
     }
+
+    //Todo Criar o SpecSql para exemplo
 
 }

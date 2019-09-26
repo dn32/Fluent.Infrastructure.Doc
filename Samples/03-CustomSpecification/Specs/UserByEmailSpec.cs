@@ -17,5 +17,10 @@ namespace CustomSpecification
         {
             return query.Where(x => x.Email.Equals(Email));
         }
+
+        public override IOrderedQueryable<User> Order(IQueryable<User> query)
+        {
+            return query.OrderBy(x => x.Name);
+        }
     }
 }

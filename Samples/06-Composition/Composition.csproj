@@ -7,7 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="CustomSpecification.db" />
+    <None Remove="Composition.db" />
   </ItemGroup>
 
   <ItemGroup>
