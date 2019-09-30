@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 
 namespace CustomSpecification
@@ -13,18 +14,18 @@ public class Startup
 {
     public void ConfigureServices(IServiceCollection services)
     {
-        /* 1. Startup Architecture */
-        services
-                .AddFluentArchitecture()
+            var jsonSerializerSettings = new JsonSerializerSettings { ContractResolver = new CamelCasePropertyNamesContractResolver() };
+
+            /* 1. Startup Architecture */
+            services
+                .AddMvc()
+                .AddNewtonsoftJson(options => options.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver())
+                .AddFluentArchitecture(jsonSerializerSettings)
                 .UseEntityFramework()
                 .AddConnectionString("Data Source=CustomSpecification.db;", createDatabaseIfNotExists: true, typeof(EfContextSqLite))
                 .Build()
                 .AddFluentDoc();
-
-        services
-            .AddMvc()
-            .AddNewtonsoftJson(options => options.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver());
-    }
+        }
 
     public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
     {

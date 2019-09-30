@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel;
+using System.Threading.Tasks;
 using Fluent.Architecture.Controllers;
 using Fluent.Architecture.Core.Specifications;
 using Microsoft.AspNetCore.Mvc;
@@ -10,37 +11,37 @@ namespace CustomSpecification
     public class UserController : FluentController<User>
     {
         //http://localhost:5000/api/User/FindByEmail?email=test02@test.com.br
-        public User FindByEmail(string email)
+        public async Task<User> FindByEmail(string email)
         {
             var spec = CreateSpec<UserByEmailSpec>().SetParameter(email);
-            return Service.FirstOrDefault(spec);
+            return await Service.FirstOrDefaultAsync(spec);
         }
 
-        public List<User> ListTeens()
+        public async Task<List<User>> ListTeens()
         {
             var minAge = 12;
             var maxAge = 18;
             var spec = CreateSpec<UserByAgeRangeEmailSpec>().SetParameter(minAge, maxAge);
-            return Service.List(spec);
+            return await Service.ListAsync(spec);
         }
 
-        public List<UserNameAndAge> ListAdults()
+        public async Task<List<UserNameAndAge>> ListAdults()
         {
             var spec = CreateSpec<NameAndAgeOfAdultsSpec>();
-            return Service.ListSelect(spec);
+            return await Service.ListSelectAsync(spec);
         }
 
         [Description("List all users")]
-        public List<User> List()
+        public async Task<List<User>> List()
         {
             var spec = CreateSpec<FluentAllSpec<User>>();
-            return Service.List(spec);
+            return await Service.ListAsync(spec);
         }
 
         [HttpPost]
-        public User[] AddRange([FromBody] User[] users)
+        public async Task<User[]> AddRange([FromBody] User[] users)
         {
-            Service.AddRange(users);
+            await Service.AddRangeAsync(users);
             return users;
         }
     }

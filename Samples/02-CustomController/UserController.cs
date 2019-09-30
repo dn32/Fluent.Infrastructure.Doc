@@ -1,5 +1,6 @@
 ﻿using Fluent.Architecture.Controllers;
 using Microsoft.AspNetCore.Mvc;
+using System.Threading.Tasks;
 
 namespace CustomController
 {
@@ -12,9 +13,9 @@ namespace CustomController
         }
 
         [NonAction]
-        public override DefaultResult Truncate([FromHeader] string ERASE_ALL_DATA = "false")
+        public override async Task<DefaultResult> Truncate([FromHeader] string ERASE_ALL_DATA = "false")
         {
-            return base.Truncate(ERASE_ALL_DATA);
+            return await base.Truncate();
         }
     }
 }

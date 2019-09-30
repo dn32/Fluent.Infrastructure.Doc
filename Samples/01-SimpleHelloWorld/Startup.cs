@@ -5,39 +5,40 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 
 namespace SimpleHelloWorld
 {
-public class Startup
-{
-    public void ConfigureServices(IServiceCollection services)
+    public class Startup
     {
-        /* 1. Startup Architecture */
-        services
-                .AddFluentArchitecture()
+        public void ConfigureServices(IServiceCollection services)
+        {
+            var jsonSerializerSettings = new JsonSerializerSettings { ContractResolver = new CamelCasePropertyNamesContractResolver() };
+          
+            /* 1. Startup Architecture */
+            services
+                .AddMvc()
+                .AddNewtonsoftJson(options => options.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver())
+                .AddFluentArchitecture(jsonSerializerSettings)
                 .UseEntityFramework()
                 .AddConnectionString("Data Source=SimpleHelloWorld.db;", createDatabaseIfNotExists: true, typeof(EfContextSqLite))
                 .Build()
                 .AddFluentDoc();
-
-        services
-            .AddMvc()
-            .AddNewtonsoftJson(options => options.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver());
-    }
-
-    public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
-    {
-        if (env.IsDevelopment())
-        {
-            app.UseDeveloperExceptionPage();
         }
 
-        app.UseRouting();
-        app.UseEndpoints(endpoints => endpoints.MapControllers());
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        {
+            if (env.IsDevelopment())
+            {
+                app.UseDeveloperExceptionPage();
+            }
 
-        /* 2. Use Architecture documentation */
-        app.UseFluentDoc();
+            app.UseRouting();
+            app.UseEndpoints(endpoints => endpoints.MapControllers());
+
+            /* 2. Use Architecture documentation */
+            app.UseFluentDoc();
+        }
     }
-}
 }
