@@ -11,6 +11,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "03_CustomSpecification", "0
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "06_Composition", "06-Composition\06_Composition.csproj", "{953B8E93-88CA-4134-B569-36CC61600797}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "10_MultipleDatabases", "10-MultipleDatabases\10_MultipleDatabases.csproj", "{80E1399D-3F25-48FC-8D07-78BB539A2596}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{953B8E93-88CA-4134-B569-36CC61600797}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{953B8E93-88CA-4134-B569-36CC61600797}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{953B8E93-88CA-4134-B569-36CC61600797}.Release|Any CPU.Build.0 = Release|Any CPU
+		{80E1399D-3F25-48FC-8D07-78BB539A2596}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{80E1399D-3F25-48FC-8D07-78BB539A2596}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{80E1399D-3F25-48FC-8D07-78BB539A2596}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{80E1399D-3F25-48FC-8D07-78BB539A2596}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

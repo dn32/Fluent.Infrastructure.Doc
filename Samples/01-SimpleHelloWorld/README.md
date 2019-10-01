@@ -28,9 +28,11 @@ public class Startup
     public void ConfigureServices(IServiceCollection services)
     {
         services
-            .AddFluentArchitecture()
+            .AddMvc()
+            .AddNewtonsoftJson(options => options.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver())
+            .AddFluentArchitecture(jsonSerializerSettings)
             .UseEntityFramework()
-            .AddConnectionString("Data Source=SimpleHelloWorld.db;", createDatabaseIfNotExists: true, typeof(EfContextSqLite))
+            .AddConnectionString("Data Source=Composition.db;", createDatabaseIfNotExists: true, typeof(EfContextSqLite))
             .Build()
             .AddFluentDoc();
 
@@ -39,6 +41,7 @@ public class Startup
 
     public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
     {
+        (...)
         app.UseFluentDoc();
         (...)
     }

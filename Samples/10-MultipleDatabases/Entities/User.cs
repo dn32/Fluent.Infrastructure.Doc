@@ -1,10 +1,8 @@
-﻿using Fluent.Architecture.Entities;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace MultipleDatabases
 {
-    /* 3. Example entity */
-    public class User : FluentEntity
+    public class User : BaseEntity
     {
         [Key]
         public long Code { get; set; }

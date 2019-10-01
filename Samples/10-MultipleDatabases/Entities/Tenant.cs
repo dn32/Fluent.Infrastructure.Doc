@@ -1,16 +1,13 @@
-﻿using Fluent.Architecture.Entities;
+﻿using Fluent.Architecture.EntityFramework;
 using System.ComponentModel.DataAnnotations;
 
 namespace MultipleDatabases
 {
-    /* 3. Example entity */
-    public class User : FluentEntity
+    public class Tenant : BaseTenantEntity
     {
         [Key]
         public long Code { get; set; }
 
         public string Email { get; set; }
-
-        public string Name { get; set; }
     }
 }
