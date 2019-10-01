@@ -1,0 +1,23 @@
+﻿@using MVCWebSite.brand_scope
+@model IEnumerable<Brand>
+
+@{
+    ViewData["Title"] = "List brands";
+}
+
+<h3>Brands</h3>
+<table class="table" style="width:100%">
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.Id</td>
+            <td>@item.Name</td>
+        </tr>
+    }
+</table>
+
+<a asp-controller="Brand" asp-action="New">New Brand</a>

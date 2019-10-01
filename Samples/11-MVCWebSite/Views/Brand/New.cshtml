@@ -1,0 +1,18 @@
+﻿@using MVCWebSite.product_scope
+@model Product
+
+@{
+    ViewData["Title"] = "Add new Product";
+}
+
+<h3>New Brand</h3>
+
+<form asp-controller="Brand" asp-action="Add" method="post">
+    <div class="form-group">
+        <label for="name">Name</label>
+        <input class="form-control" placeholder="Enter a name" asp-for="Name" />
+    </div>
+    <button type="submit" class="btn btn-primary">Save</button>
+</form>
+
+<a asp-controller="Product" asp-action="List">List Brands</a>
