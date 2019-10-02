@@ -10,12 +10,16 @@
     <tr>
         <th>Id</th>
         <th>Name</th>
+        <th>Edit</th>
+        <th>Remove</th>
     </tr>
     @foreach (var item in Model)
     {
         <tr>
             <td>@item.Id</td>
             <td>@item.Name</td>
+            <td><a asp-controller="Brand" asp-action="Edit" asp-route-id="@item.Id">Edit</a></td>
+            <td><a asp-controller="Brand" asp-action="Remove" asp-route-id="@item.Id">Remove</a></td>
         </tr>
     }
 </table>
