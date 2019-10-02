@@ -11,6 +11,8 @@ namespace MVCWebSite.product_scope
         [FluentUniqueKey]
         public string Name { get; set; }
 
+        public decimal Value { get; set; }
+
         public int BrandId { get; set; }
 
         [ForeignKey(nameof(BrandId))]

@@ -16,6 +16,11 @@ namespace MVCWebSite.brand_scope
         }
     }
 
+    /*
+        It is possible to query by specifying a return type as a view model,
+        but there is a bug in the Entity Framework that is temporarily preventing this.
+   */
+
     //public class BrandSelectListItemSpec : FluentSelectSpecification<Brand, BrandViewModel>
     //{
     //    public override IQueryable<BrandViewModel> Where(IQueryable<Brand> query)

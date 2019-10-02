@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc.Filters;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using MVCWebSite.base_elements;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 
@@ -41,8 +42,9 @@ namespace MVCWebSite
             builder
                 .AddNewtonsoftJson(options => options.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver())
                 .AddFluentArchitecture(jsonSerializerSettings)
+                .SetGenericControllerType(typeof(MvcBaseController<>))
                 .UseEntityFramework()
-                .AddConnectionString("Data Source=11_MVCWebSite.db;", createDatabaseIfNotExists: true, typeof(EfContextSqLite))
+                .AddConnectionString("Data Source=MVCWebSite.db;", createDatabaseIfNotExists: true, typeof(EfContextSqLite))
                 .Build()
                 .AddFluentDoc();
         }

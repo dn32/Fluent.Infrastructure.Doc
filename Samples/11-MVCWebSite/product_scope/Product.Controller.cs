@@ -1,10 +1,9 @@
 ﻿using Fluent.Architecture.Extensions;
 using Microsoft.AspNetCore.Mvc;
 using MVCWebSite.base_elements;
-using MVCWebSite.product_scope;
 using System.Threading.Tasks;
 
-namespace MVCWebSite.Controllers
+namespace MVCWebSite.product_scope
 {
     public class ProductController : MvcBaseController<Product>
     {

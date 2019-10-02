@@ -11,10 +11,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Fluent.Architecture.Core" Version="2.0.1-beta100210" />
-    <PackageReference Include="Fluent.Architecture.Core.Doc" Version="2.0.1-beta100210" />
-    <PackageReference Include="Fluent.Architecture.EntityFramework" Version="2.0.1-beta100210" />
-    <PackageReference Include="Fluent.Architecture.EntityFramework.SqLite" Version="2.0.1-beta100210" />  
+    <PackageReference Include="Fluent.Architecture.Core" Version="2.0.1-beta100211" />
+    <PackageReference Include="Fluent.Architecture.Core.Doc" Version="2.0.1-beta100211" />
+    <PackageReference Include="Fluent.Architecture.EntityFramework" Version="2.0.1-beta100211" />
+    <PackageReference Include="Fluent.Architecture.EntityFramework.SqLite" Version="2.0.1-beta100211" />  
   </ItemGroup>
 
 </Project>
