@@ -1,5 +1,4 @@
-﻿using Fluent.Architecture.Core.Attributes;
-using Fluent.Architecture.Entities;
+﻿using Fluent.Architecture.Entities;
 using Fluent.Architecture.Interfaces;
 using MVCWebSite.brand_scope;
 using System.ComponentModel.DataAnnotations;

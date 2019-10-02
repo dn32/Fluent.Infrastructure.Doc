@@ -12,7 +12,7 @@ namespace MVCWebSite.Controllers
     {
         [HttpGet]
         [Description("Get a paged list of brands")]
-        public virtual async Task<IActionResult> List(int itemsPerPage,int currentPage)
+        public virtual async Task<IActionResult> List(int itemsPerPage, int currentPage)
         {
             var pagination = new FluentPagination(currentPage, true, itemsPerPage);
             var spec = CreateSpec<FluentAllSpec<Brand>>().SetParameter(isList: true);

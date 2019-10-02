@@ -1,5 +1,4 @@
-﻿using Fluent.Architecture.EntityFramework;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace MultipleDatabases
 {

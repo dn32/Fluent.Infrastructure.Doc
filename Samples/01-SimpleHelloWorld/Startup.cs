@@ -15,7 +15,7 @@ namespace MultipleDatabases
         public void ConfigureServices(IServiceCollection services)
         {
             var jsonSerializerSettings = new JsonSerializerSettings { ContractResolver = new CamelCasePropertyNamesContractResolver() };
-          
+
             /* 1. Startup Architecture */
             services
                 .AddMvc()

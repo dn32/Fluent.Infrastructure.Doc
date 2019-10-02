@@ -1,9 +1,9 @@
-﻿using System.Collections.Generic;
-using System.ComponentModel;
-using System.Threading.Tasks;
-using Fluent.Architecture.Controllers;
+﻿using Fluent.Architecture.Controllers;
 using Fluent.Architecture.Core.Specifications;
 using Microsoft.AspNetCore.Mvc;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Threading.Tasks;
 
 namespace CustomSpecification
 {

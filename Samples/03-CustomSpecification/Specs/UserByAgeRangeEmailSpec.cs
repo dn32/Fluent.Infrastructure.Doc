@@ -1,5 +1,5 @@
-﻿using System.Linq;
-using Fluent.Architecture.Specifications;
+﻿using Fluent.Architecture.Specifications;
+using System.Linq;
 
 namespace CustomSpecification
 {

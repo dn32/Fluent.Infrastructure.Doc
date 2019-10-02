@@ -10,10 +10,10 @@ using Newtonsoft.Json.Serialization;
 
 namespace CustomSpecification
 {
-public class Startup
-{
-    public void ConfigureServices(IServiceCollection services)
+    public class Startup
     {
+        public void ConfigureServices(IServiceCollection services)
+        {
             var jsonSerializerSettings = new JsonSerializerSettings { ContractResolver = new CamelCasePropertyNamesContractResolver() };
 
             /* 1. Startup Architecture */
@@ -27,18 +27,18 @@ public class Startup
                 .AddFluentDoc();
         }
 
-    public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
-    {
-        if (env.IsDevelopment())
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
-            app.UseDeveloperExceptionPage();
+            if (env.IsDevelopment())
+            {
+                app.UseDeveloperExceptionPage();
+            }
+
+            app.UseRouting();
+            app.UseEndpoints(endpoints => endpoints.MapControllers());
+
+            /* 2. Use Architecture documentation */
+            app.UseFluentDoc();
         }
-
-        app.UseRouting();
-        app.UseEndpoints(endpoints => endpoints.MapControllers());
-
-        /* 2. Use Architecture documentation */
-        app.UseFluentDoc();
     }
-}
 }
