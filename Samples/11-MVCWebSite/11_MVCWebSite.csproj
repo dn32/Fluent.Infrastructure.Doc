@@ -7,10 +7,10 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Fluent.Architecture.Core" Version="2.0.1-beta100109" />
-    <PackageReference Include="Fluent.Architecture.Core.Doc" Version="2.0.1-beta100109" />
-    <PackageReference Include="Fluent.Architecture.EntityFramework" Version="2.0.1-beta100109" />
-    <PackageReference Include="Fluent.Architecture.EntityFramework.SqLite" Version="2.0.1-beta100109" />
+    <PackageReference Include="Fluent.Architecture.Core" Version="2.0.1-beta100210" />
+    <PackageReference Include="Fluent.Architecture.Core.Doc" Version="2.0.1-beta100210" />
+    <PackageReference Include="Fluent.Architecture.EntityFramework" Version="2.0.1-beta100210" />
+    <PackageReference Include="Fluent.Architecture.EntityFramework.SqLite" Version="2.0.1-beta100210" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.0.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.0.0">
       <PrivateAssets>all</PrivateAssets>
@@ -18,9 +18,5 @@
     </PackageReference>
     <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="3.0.0" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.0.0" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Views\Home\" />
   </ItemGroup>
 </Project>

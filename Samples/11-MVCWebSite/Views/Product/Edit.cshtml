@@ -1,0 +1,24 @@
+﻿@model Product
+@{
+    ViewData["Title"] = "Add new Product";
+    var brands = ViewBag.Brands as IEnumerable<SelectListItem>;
+}
+
+<h3>Update Products</h3>
+
+<form asp-controller="Product" asp-action="Update" method="post">
+    <input type="hidden" asp-for="Id" />
+  
+    <div class="form-group">
+        <label for="name">Name</label>
+        <input class="form-control" placeholder="Enter a name" asp-for="Name" />
+    </div>
+    <div class="form-group">
+        <label for="name">Brand</label>
+        <select class="form-control" asp-for="BrandId" da asp-items="brands"></select>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Update</button>
+</form>
+
+<a asp-controller="Product" asp-action="List">List Products</a>

@@ -1,12 +1,11 @@
-﻿using Fluent.Architecture.Entities;
-using System.ComponentModel.DataAnnotations;
+﻿using Fluent.Architecture.Attributes;
+using MVCWebSite.base_elements;
 
 namespace MVCWebSite.brand_scope
 {
-    public class Brand : FluentEntity
+    public class Brand : MvcBaseEntity
     {
-        [Key]
-        public int Id { get; set; }
+        [FluentUniqueKey]
         public string Name { get; set; }
     }
 }

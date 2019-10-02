@@ -1,21 +1,19 @@
-﻿using Fluent.Architecture.Entities;
+﻿using Fluent.Architecture.Attributes;
 using Fluent.Architecture.Interfaces;
+using MVCWebSite.base_elements;
 using MVCWebSite.brand_scope;
-using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace MVCWebSite.product_scope
 {
-    public class Product : FluentEntity, IFluentInclusionEntity
+    public class Product : MvcBaseEntity, IFluentInclusionEntity
     {
-        [Key]
-        public int Id { get; set; }
-
+        [FluentUniqueKey]
         public string Name { get; set; }
 
         public int BrandId { get; set; }
 
-        [ForeignKey(nameof(BrandId))]//, FluentAggregation(LocalKey = nameof(BrandId), ExternalKey = nameof(brand_scope.Brand.Id))]
+        [ForeignKey(nameof(BrandId))]
         public Brand Brand { get; set; }
 
         public string[] InclusionsForList => new[] { nameof(Brand) };
