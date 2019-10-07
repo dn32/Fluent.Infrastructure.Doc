@@ -1,5 +1,5 @@
-﻿using Fluent.Architecture.Entities;
-using Fluent.Architecture.EntityFramework;
+﻿using Fluent.Architecture.EntityFramework;
+using Fluent.Architecture.Core.Models;
 
 namespace MultipleDatabases
 {

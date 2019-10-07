@@ -1,6 +1,7 @@
 ﻿using Fluent.Architecture.Core.Attributes;
-using Fluent.Architecture.Entities;
 using System.ComponentModel.DataAnnotations;
+using Fluent.Architecture.Core.Models;
+using Fluent.Architecture.Core.Models;
 
 namespace Composition.Entities
 {

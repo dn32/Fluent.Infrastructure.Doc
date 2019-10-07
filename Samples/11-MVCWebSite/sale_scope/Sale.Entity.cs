@@ -28,5 +28,5 @@ namespace MVCWebSite.product_scope
         public string[] InclusionsForList => new[] { nameof(ProductSaleList), nameof(Client) };
 
         public string[] InclusionsForOne => new[] { nameof(ProductSaleList), nameof(Client), $"{nameof(ProductSaleList)}.{nameof(ProductSale.Product)}" };
-    }  
+    }
 }

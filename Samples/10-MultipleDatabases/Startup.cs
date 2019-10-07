@@ -1,5 +1,4 @@
 using Fluent.Architecture;
-using Fluent.Architecture.Entities;
 using Fluent.Architecture.EntityFramework;
 using Fluent.Architecture.EntityFramework.SqLite;
 using Microsoft.AspNetCore.Builder;
@@ -8,6 +7,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
+using Fluent.Architecture.Core.Models;
 
 namespace MultipleDatabases
 {

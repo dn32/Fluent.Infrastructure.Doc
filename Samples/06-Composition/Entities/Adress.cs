@@ -1,5 +1,5 @@
 ﻿using Fluent.Architecture.Core.Attributes;
-using Fluent.Architecture.Entities;
+using Fluent.Architecture.Core.Models;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 

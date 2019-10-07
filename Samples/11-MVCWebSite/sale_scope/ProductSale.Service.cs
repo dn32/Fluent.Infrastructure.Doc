@@ -1,6 +1,6 @@
-﻿using Fluent.Architecture.Exceptions.ValidationException;
-using Fluent.Architecture.Services;
+﻿using Fluent.Architecture.Services;
 using System.Threading.Tasks;
+using Fluent.Architecture.Core.Models;
 
 namespace MVCWebSite.product_scope
 {

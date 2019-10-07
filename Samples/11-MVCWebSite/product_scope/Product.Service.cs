@@ -1,5 +1,5 @@
 ﻿using Fluent.Architecture.Core.Specifications;
-using Fluent.Architecture.Entities;
+using Fluent.Architecture.Core.Models;
 using Fluent.Architecture.Services;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using MVCWebSite.brand_scope;

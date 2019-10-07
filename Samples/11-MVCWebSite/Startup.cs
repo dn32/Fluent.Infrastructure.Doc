@@ -1,6 +1,7 @@
 using Fluent.Architecture;
 using Fluent.Architecture.EntityFramework;
 using Fluent.Architecture.EntityFramework.SqLite;
+using Fluent.Architecture.Filters;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc.Filters;

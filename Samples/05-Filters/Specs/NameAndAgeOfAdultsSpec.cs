@@ -1,4 +1,5 @@
-﻿using Fluent.Architecture.Specifications;
+﻿using Filters;
+using Fluent.Architecture.Specifications;
 using System.Linq;
 
 namespace CustomSpecification

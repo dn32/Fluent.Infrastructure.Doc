@@ -1,6 +1,6 @@
 ﻿using Fluent.Architecture.Controllers;
+using Fluent.Architecture.Core.Models;
 using Fluent.Architecture.Core.Specifications;
-using Fluent.Architecture.Entities;
 using Microsoft.AspNetCore.Mvc;
 using System.ComponentModel;
 using System.Threading.Tasks;

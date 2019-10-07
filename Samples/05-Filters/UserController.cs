@@ -1,16 +1,8 @@
 ﻿using Fluent.Architecture.Controllers;
-using Fluent.Architecture.Core.Extensions;
-using Fluent.Architecture.Core.Filters;
+using Fluent.Architecture.Core.Enumerator;
 using Fluent.Architecture.Core.Specifications;
-using Fluent.Architecture.Entities;
-using Fluent.Architecture.Extensions;
-using Fluent.Architecture.Specifications;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace CustomSpecification
@@ -61,45 +53,45 @@ namespace CustomSpecification
     //    }
     //}
 
-//    public class FluentFilterOracleSpec<TE> : FluentFilterSpec<TE> where TE : FluentEntity
-//    {
-//        //private string Term { get; set; }
+    //    public class FluentFilterOracleSpec<TE> : FluentFilterSpec<TE> where TE : FluentEntity
+    //    {
+    //        //private string Term { get; set; }
 
-//        //private string TableName { get; set; }
+    //        //private string TableName { get; set; }
 
-//        //private string ColumnName { get; set; }
+    //        //private string ColumnName { get; set; }
 
-//        //private int Tolerance { get; set; }
+    //        //private int Tolerance { get; set; }
 
-//        //public FluentFilterOracleSpec<TE> AddParameter(string property, string term, int tolerance)
-//        //{
-//        //    TableName = typeof(TE).GetTableName();
-//        //    ColumnName = typeof(TE).GetProperties().FirstOrDefault(x => x.Name.Equals(property, StringComparison.InvariantCultureIgnoreCase))?.GetColumnName() ?? throw new Exception($"Property not found {typeof(TE).Name}.{property}");
-//        //    Term = term;
-//        //    Tolerance = tolerance;
-//        //    return this;
-//        //}
+    //        //public FluentFilterOracleSpec<TE> AddParameter(string property, string term, int tolerance)
+    //        //{
+    //        //    TableName = typeof(TE).GetTableName();
+    //        //    ColumnName = typeof(TE).GetProperties().FirstOrDefault(x => x.Name.Equals(property, StringComparison.InvariantCultureIgnoreCase))?.GetColumnName() ?? throw new Exception($"Property not found {typeof(TE).Name}.{property}");
+    //        //    Term = term;
+    //        //    Tolerance = tolerance;
+    //        //    return this;
+    //        //}
 
-//        public override IQueryable<TE> Where(IQueryable<TE> query)
-//        {
-//            IgnoreOrder = true;
-//            if (string.IsNullOrWhiteSpace(Term)) { return query.OrderBy(x => x); }
+    //        public override IQueryable<TE> Where(IQueryable<TE> query)
+    //        {
+    //            IgnoreOrder = true;
+    //            if (string.IsNullOrWhiteSpace(Term)) { return query.OrderBy(x => x); }
 
-//            var dbSet = query as DbSet<TE>;
-//            var sql = $@"
-//select * from {TableName}
-//where UTL_MATCH.jaro_winkler_similarity(lower({ColumnName}), lower({{0}})) > {Tolerance}
-//order by UTL_MATCH.jaro_winkler_similarity(lower({ColumnName}), lower({{0}})) DESC
-//";
+    //            var dbSet = query as DbSet<TE>;
+    //            var sql = $@"
+    //select * from {TableName}
+    //where UTL_MATCH.jaro_winkler_similarity(lower({ColumnName}), lower({{0}})) > {Tolerance}
+    //order by UTL_MATCH.jaro_winkler_similarity(lower({ColumnName}), lower({{0}})) DESC
+    //";
 
-//#if NETCOREAPP3_0
-//            return dbSet.FromSqlRaw(sql, Term);
-//#else
-//            return dbSet.FromSql(sql, Term);
-//#endif
-//        }
+    //#if NETCOREAPP3_0
+    //            return dbSet.FromSqlRaw(sql, Term);
+    //#else
+    //            return dbSet.FromSql(sql, Term);
+    //#endif
+    //        }
 
-//        public override IOrderedQueryable<TE> Order(IQueryable<TE> query) => throw new NotImplementedException();
-//    }
+    //        public override IOrderedQueryable<TE> Order(IQueryable<TE> query) => throw new NotImplementedException();
+    //    }
 
 }
