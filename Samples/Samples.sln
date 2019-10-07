@@ -15,7 +15,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "10_MultipleDatabases", "10-
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "11_MVCWebSite", "11-MVCWebSite\11_MVCWebSite.csproj", "{84859D9F-D68D-4AC0-876B-A66C646CB51C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "11_MVCWebSite.Test", "11-MVCWebSite.Test\MVCWebSite.Test\11_MVCWebSite.Test.csproj", "{E9EF9CA5-2098-484E-94CE-8DF668C287BC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "11_MVCWebSite.Test", "11-MVCWebSite.Test\MVCWebSite.Test\11_MVCWebSite.Test.csproj", "{E9EF9CA5-2098-484E-94CE-8DF668C287BC}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "05_Filters", "05-Filters\05_Filters.csproj", "{1C7CEF1F-E184-4AAF-9696-A8034AD8C588}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +53,10 @@ Global
 		{E9EF9CA5-2098-484E-94CE-8DF668C287BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E9EF9CA5-2098-484E-94CE-8DF668C287BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E9EF9CA5-2098-484E-94CE-8DF668C287BC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1C7CEF1F-E184-4AAF-9696-A8034AD8C588}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C7CEF1F-E184-4AAF-9696-A8034AD8C588}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C7CEF1F-E184-4AAF-9696-A8034AD8C588}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C7CEF1F-E184-4AAF-9696-A8034AD8C588}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

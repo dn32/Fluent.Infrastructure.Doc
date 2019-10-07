@@ -1,5 +1,4 @@
 using Fluent.Architecture;
-using Fluent.Architecture.Entities;
 using Fluent.Architecture.EntityFramework;
 using Fluent.Architecture.EntityFramework.SqLite;
 using Microsoft.AspNetCore.Builder;
@@ -9,11 +8,11 @@ using Microsoft.Extensions.Hosting;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 
-namespace MultipleDatabases
+namespace CustomSpecification
 {
     public class Startup
     {
-        public void ConfigureServices(IServiceCollection services, IWebHostEnvironment env)
+        public void ConfigureServices(IServiceCollection services)
         {
             var jsonSerializerSettings = new JsonSerializerSettings { ContractResolver = new CamelCasePropertyNamesContractResolver() };
 
@@ -23,20 +22,9 @@ namespace MultipleDatabases
                 .AddNewtonsoftJson(options => options.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver())
                 .AddFluentArchitecture(jsonSerializerSettings)
                 .UseEntityFramework()
-                .AddConnectionString("Data Source=tanant_db.db;", createDatabaseIfNotExists: true, typeof(EfContextSqLite), "tanant_db")
-                .AddConnectionString(GetTenantDB, createDatabaseIfNotExists: true, typeof(EfContextSqLite), "client_db")
+                .AddConnectionString("Data Source=05_Filters.db;", createDatabaseIfNotExists: true, typeof(EfContextSqLite))
                 .Build()
                 .AddFluentDoc();
-        }
-
-        //This method is invoked on every request.
-        string GetTenantDB(UserSessionRequest userSessionRequest)
-        {
-            //Example
-            //var tenant_id = userSessionRequest.LocalHttpContext.User.Claims.FirstOrDefault(x => x.Type.Equals("tenant_id")).Value;
-            //return $"Data Source=client_db{tenant_id}.db;";
-
-            return $"Data Source=client_db.db;";
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
