@@ -13,12 +13,4 @@ namespace Migrations
 
         public string Name { get; set; }
     }
-
-    public class Custom : FluentEntity
-    {
-        [Key]
-        public long Code { get; set; }
-
-        public string Name { get; set; }
-    }
 }
