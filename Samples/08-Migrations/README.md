@@ -8,13 +8,13 @@ dotnet tool install -g dotnet-ef --version 3.0.0
 dotnet ef migrations add InitialCreate
 ````
 
-## 05 Update database
+### 05 - Update database
 ````dotnet
 dotnet ef database update
 ````
 
 
-### 03 Add new model
+### 03 - Add new model
 
 ```C#
 public class Custom : FluentEntity
@@ -26,13 +26,13 @@ public class Custom : FluentEntity
 }
 ````
 
-## 04 Add new migration
+### 04 - Add new migration
 
 ````dotnet
 dotnet ef migrations add AddCustom
 ````
 
-## 05 Update database
+### 05 - Update database
 ````dotnet
 dotnet ef database update
 ````
