@@ -3,6 +3,7 @@ using Fluent.Architecture.EntityFramework;
 using Fluent.Architecture.EntityFramework.SqLite;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Newtonsoft.Json;
@@ -22,7 +23,7 @@ namespace Migrations
                 .AddNewtonsoftJson(options => options.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver())
                 .AddFluentArchitecture(jsonSerializerSettings)
                 .UseEntityFramework()
-                .AddConnectionString("Data Source=Migrations.db;", createDatabaseIfNotExists: true, typeof(MyEfContextSqLite))
+                .AddConnectionString("Data Source=Migrations.db;", createDatabaseIfNotExists: true, typeof(EfContextSqLite))
                 .Build()
                 .AddFluentDoc();
 

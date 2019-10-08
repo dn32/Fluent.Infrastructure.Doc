@@ -1,4 +1,6 @@
-﻿### 01 - Install tools
+﻿### 00 - Open the console in your application directory.
+
+### 01 - Install tools
 ````dotnet
 dotnet tool install -g dotnet-ef --version 3.0.0
 ````
