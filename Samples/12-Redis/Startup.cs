@@ -1,16 +1,19 @@
 using Fluent.Architecture;
+using Fluent.Architecture.Core.Services;
 using Fluent.Architecture.EntityFramework;
 using Fluent.Architecture.EntityFramework.SqLite;
 using Fluent.Architecture.Filters;
+using Fluent.Architecture.Redis;
+using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
-using System;
 
-namespace Composition
+namespace Migrations
 {
     public class Startup
     {
@@ -19,23 +22,20 @@ namespace Composition
             var jsonSerializerSettings = new JsonSerializerSettings { ContractResolver = new CamelCasePropertyNamesContractResolver() };
             var jwtInfo = new FluentJwtInfo
             {
-                Audience = "07_Authentication",
-                Issuer = "07_Authentication",
-                SecretKey = "My private key" //Todo - Attention! This key must be changed!
+                Audience = "Maxima",
+                Issuer = "Maxima",
+                SecretKey = System.Text.Encoding.ASCII.GetString(new byte[] { 0x6d, 0x61, 0x78, 0x69, 0x6d, 0x61, 0x73, 0x69, 0x73, 0x74, 0x65, 0x6d, 0x61, 0x73, 0x40, 0x32, 0x30, 0x31, 0x38 })
             };
-
-#if RELEASE
-            if (jwtInfo.SecretKey == "My private key") throw new InvalidOperationException("Attention! This key must be changed!");
-#endif
 
             /* 1. Startup Architecture */
             services
                 .AddMvc()
                 .AddNewtonsoftJson(options => options.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver())
                 .AddFluentArchitecture(jsonSerializerSettings)
-                .UseJwt<CustomAuthenticationService>(jwtInfo)
                 .UseEntityFramework()
-                .AddConnectionString("Data Source=Authentication.db;", createDatabaseIfNotExists: true, typeof(EfContextSqLite))
+                .AddConnectionString("Data Source=Migrations.db;", createDatabaseIfNotExists: true, typeof(EfContextSqLite))
+                .UseJwt<FluentAuthenticationService>(jwtInfo)
+                .UseRedis<FluentRedisService>("localhost")
                 .Build()
                 .AddFluentDoc();
         }

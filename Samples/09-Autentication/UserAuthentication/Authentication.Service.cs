@@ -3,7 +3,7 @@ using Fluent.Architecture.Core.Services;
 using Fluent.Architecture.Services;
 using System.Threading.Tasks;
 
-namespace Migrations
+namespace 09_Authentication.UserAuthentication
 {
     public class AuthenticationService : FluentAuthenticationService
     {

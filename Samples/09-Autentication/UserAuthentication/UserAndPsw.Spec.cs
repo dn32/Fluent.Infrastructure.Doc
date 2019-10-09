@@ -2,7 +2,7 @@
 using Autentication.Extension;
 using Fluent.Architecture.Specifications;
 
-namespace Migrations
+namespace Authentication.UserAuthentication
 {
     public class UserAndPswSpec : FluentSpecification<User>
     {
@@ -19,7 +19,7 @@ namespace Migrations
 
         public override IQueryable<User> Where(IQueryable<User> query)
         {
-            return query.Where(x => x.Email.Equals(Email, System.StringComparison.InvariantCultureIgnoreCase) && x.MD5Password == PswMD5)
+            return query.Where(x => x.Email.Equals(Email, System.StringComparison.InvariantCultureIgnoreCase) && x.MD5Password == PswMD5);
         }
 
         public override IOrderedQueryable<User> Order(IQueryable<User> query)

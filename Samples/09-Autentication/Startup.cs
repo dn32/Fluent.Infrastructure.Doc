@@ -10,7 +10,7 @@ using Microsoft.Extensions.Hosting;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 
-namespace Migrations
+namespace Authentication
 {
     public class Startup
     {
