@@ -6,15 +6,4 @@
     <SignAssembly>true</SignAssembly>
   </PropertyGroup>
 
-  <ItemGroup>
-    <None Remove="CustomController.db" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <PackageReference Include="Fluent.Architecture.Core" Version="2.0.1" />
-    <PackageReference Include="Fluent.Architecture.Core.Doc" Version="2.0.1" />
-    <PackageReference Include="Fluent.Architecture.EntityFramework" Version="2.0.1" />
-    <PackageReference Include="Fluent.Architecture.EntityFramework.SqLite" Version="2.0.1" /> 
-  </ItemGroup>
-
 </Project>
