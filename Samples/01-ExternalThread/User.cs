@@ -1,5 +1,4 @@
-﻿using Fluent.Architecture.Attributes;
-using Fluent.Architecture.Core.Models;
+﻿using Fluent.Architecture.Core.Models;
 using System.ComponentModel.DataAnnotations;
 
 namespace SimpleHelloWorld
@@ -13,15 +12,5 @@ namespace SimpleHelloWorld
         public string Email { get; set; }
 
         public string Name { get; set; }
-
-        public PernonType PernonType { get; set; }
-    }
-
-    [FluentEnumValueForSetNull(value: 0)]
-    public enum PernonType
-    {
-        None = 0,
-        LegalPerson = 1,
-        PhysicalPerson = 2
     }
 }
