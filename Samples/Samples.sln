@@ -42,8 +42,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "12_Redis", "12-Redis\12_Red
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Fluent.Architecture.Redis", "..\..\Fluent.Architecture\Fluent.Architecture.Redis\Fluent.Architecture.Redis.csproj", "{4697EC2D-B483-44F4-A85D-A73F1C2F47D0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01_2_SimpleHelloWorld_net_core_2_2", "SimpleHelloWorld_net_core_2_2\01_2_SimpleHelloWorld_net_core_2_2.csproj", "{99F79353-D735-49AF-96DC-EE8583940D47}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -114,10 +112,6 @@ Global
 		{4697EC2D-B483-44F4-A85D-A73F1C2F47D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4697EC2D-B483-44F4-A85D-A73F1C2F47D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4697EC2D-B483-44F4-A85D-A73F1C2F47D0}.Release|Any CPU.Build.0 = Release|Any CPU
-		{99F79353-D735-49AF-96DC-EE8583940D47}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{99F79353-D735-49AF-96DC-EE8583940D47}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{99F79353-D735-49AF-96DC-EE8583940D47}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{99F79353-D735-49AF-96DC-EE8583940D47}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
