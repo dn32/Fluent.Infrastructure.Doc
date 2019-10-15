@@ -2,7 +2,7 @@
 using Fluent.Architecture.Core.Models;
 using System.ComponentModel.DataAnnotations;
 
-namespace SimpleHelloWorld
+namespace MultipleDatabases
 {
     /* 3. Example entity */
     public class User : FluentEntity

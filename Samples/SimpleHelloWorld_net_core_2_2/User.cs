@@ -1,0 +1,16 @@
+﻿using Fluent.Architecture.Core.Models;
+using System.ComponentModel.DataAnnotations;
+
+namespace SimpleHelloWorld_net_core_2_2
+{
+    /* 3. Example entity */
+    public class User : FluentEntity
+    {
+        [Key]
+        public long Code { get; set; }
+
+        public string Email { get; set; }
+
+        public string Name { get; set; }
+    }
+}

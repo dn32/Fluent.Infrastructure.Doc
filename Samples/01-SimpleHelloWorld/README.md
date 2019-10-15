@@ -27,23 +27,24 @@ public class Startup
 {
     public void ConfigureServices(IServiceCollection services)
     {
+        var jsonSerializerSettings = new JsonSerializerSettings { ContractResolver = new CamelCasePropertyNamesContractResolver() };
+
+        /* 1. Startup Architecture */
         services
             .AddMvc()
             .AddNewtonsoftJson(options => options.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver())
             .AddFluentArchitecture(jsonSerializerSettings)
             .UseEntityFramework()
-            .AddConnectionString("Data Source=Composition.db;", createDatabaseIfNotExists: true, typeof(EfContextSqLite))
+            .AddConnectionString("Data Source=SimpleHelloWorld.db;", createDatabaseIfNotExists: true, typeof(EfContextSqLite))
             .Build()
             .AddFluentDoc();
-
-            (...)
     }
 
     public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
     {
         (...)
+        /* 2. Use Architecture documentation */
         app.UseFluentDoc();
-        (...)
     }
 }
 ````
