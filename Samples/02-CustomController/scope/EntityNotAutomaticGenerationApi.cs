@@ -1,10 +1,11 @@
-﻿using Fluent.Architecture.Core.Models;
+﻿using Fluent.Architecture.Core.Attributes;
+using Fluent.Architecture.Core.Models;
 using System.ComponentModel.DataAnnotations;
 
 namespace CustomController
 {
-    /* 3. Example entity */
-    public class User : FluentEntity
+    [FluentAPIController(AutomaticGeneration = false)]
+    public class EntityNotAutomaticGenerationApi : FluentEntity
     {
         [Key]
         public long Code { get; set; }
