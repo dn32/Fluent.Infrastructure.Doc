@@ -19,11 +19,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Update="Fluent.Architecture.Core" Version="2.0.1.3-beta100902" />
-    <PackageReference Update="Fluent.Architecture.Core.Doc" Version="2.0.1.3-beta100902" />
-    <PackageReference Update="Fluent.Architecture.EntityFramework" Version="2.0.1.3-beta100902" />
-    <PackageReference Update="Fluent.Architecture.EntityFramework.SqLite" Version="2.0.1.3-beta100902" />
-    <PackageReference Update="Fluent.Architecture.Redis" Version="2.0.1.3-beta100902" />
+    <PackageReference Update="Fluent.Architecture.Core" Version="2.0.1.3-beta101609" />
+    <PackageReference Update="Fluent.Architecture.Core.Doc" Version="2.0.1.3-beta101609" />
+    <PackageReference Update="Fluent.Architecture.EntityFramework" Version="2.0.1.3-beta101609" />
+    <PackageReference Update="Fluent.Architecture.EntityFramework.SqLite" Version="2.0.1.3-beta101609" />
+    <PackageReference Update="Fluent.Architecture.Redis" Version="2.0.1.3-beta101609" />
   </ItemGroup>
 
 </Project>

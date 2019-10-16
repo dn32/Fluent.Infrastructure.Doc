@@ -42,7 +42,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "12_Redis", "12-Redis\12_Red
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Fluent.Architecture.Redis", "..\..\Fluent.Architecture\Fluent.Architecture.Redis\Fluent.Architecture.Redis.csproj", "{4697EC2D-B483-44F4-A85D-A73F1C2F47D0}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "01_ExternalThread", "01-ExternalThread\01_ExternalThread.csproj", "{243AFFE5-9B48-45A0-A23C-F7C3B90C4398}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "07_Aggregation", "07-Aggregation\07_Aggregation.csproj", "{D6B6AF4A-04EE-4515-B3C9-D3F020569A74}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "01_2_SimpleHelloWorld_net_core_2_2", "01-SimpleHelloWorld_net_core_2_2\01_2_SimpleHelloWorld_net_core_2_2.csproj", "{849716A5-1EF0-47BA-93B1-0819557486F9}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "13_ExternalThread", "13-ExternalThread\13_ExternalThread.csproj", "{141E6E1C-245F-4D24-8B6E-A92B07141BA6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -114,10 +118,18 @@ Global
 		{4697EC2D-B483-44F4-A85D-A73F1C2F47D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4697EC2D-B483-44F4-A85D-A73F1C2F47D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4697EC2D-B483-44F4-A85D-A73F1C2F47D0}.Release|Any CPU.Build.0 = Release|Any CPU
-		{243AFFE5-9B48-45A0-A23C-F7C3B90C4398}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{243AFFE5-9B48-45A0-A23C-F7C3B90C4398}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{243AFFE5-9B48-45A0-A23C-F7C3B90C4398}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{243AFFE5-9B48-45A0-A23C-F7C3B90C4398}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D6B6AF4A-04EE-4515-B3C9-D3F020569A74}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D6B6AF4A-04EE-4515-B3C9-D3F020569A74}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D6B6AF4A-04EE-4515-B3C9-D3F020569A74}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D6B6AF4A-04EE-4515-B3C9-D3F020569A74}.Release|Any CPU.Build.0 = Release|Any CPU
+		{849716A5-1EF0-47BA-93B1-0819557486F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{849716A5-1EF0-47BA-93B1-0819557486F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{849716A5-1EF0-47BA-93B1-0819557486F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{849716A5-1EF0-47BA-93B1-0819557486F9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{141E6E1C-245F-4D24-8B6E-A92B07141BA6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{141E6E1C-245F-4D24-8B6E-A92B07141BA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{141E6E1C-245F-4D24-8B6E-A92B07141BA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{141E6E1C-245F-4D24-8B6E-A92B07141BA6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
