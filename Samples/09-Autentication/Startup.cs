@@ -1,3 +1,4 @@
+using Authentication.UserAuthentication;
 using Fluent.Architecture;
 using Fluent.Architecture.EntityFramework;
 using Fluent.Architecture.EntityFramework.SqLite;

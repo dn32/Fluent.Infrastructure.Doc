@@ -1,6 +1,7 @@
 using Fluent.Architecture;
 using Fluent.Architecture.EntityFramework;
 using Fluent.Architecture.EntityFramework.SqLite;
+using Fluent.Architecture.Filters;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.DependencyInjection;
@@ -18,7 +19,7 @@ namespace Composition
 
             /* 1. Startup Architecture */
             services
-                .AddMvc()
+                .AddMvc(options => { options.Filters.Add(new FluentExceptionHandlerAttribute()); })
                 .AddNewtonsoftJson(options => options.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver())
                 .AddFluentArchitecture(jsonSerializerSettings)
                 .UseEntityFramework()

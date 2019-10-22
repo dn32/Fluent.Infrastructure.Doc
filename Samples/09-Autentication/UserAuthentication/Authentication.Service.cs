@@ -1,6 +1,8 @@
 ﻿using Fluent.Architecture.Core.Models;
 using Fluent.Architecture.Core.Services;
 using Fluent.Architecture.Services;
+using System.Collections.Generic;
+using System.Security.Claims;
 using System.Threading.Tasks;
 
 namespace Authentication.UserAuthentication
@@ -9,10 +11,16 @@ namespace Authentication.UserAuthentication
     {
         protected virtual FluentService<User> UserService => null;
 
-        public override async Task<bool> AuthenticateAsync(FluentAuthenticationUser user)
+        public override async Task<(bool sucess, List<Claim> claims)> AuthenticateAsync(FluentAuthenticationUser user)
         {
             var spec = CreateSpec<UserAndPswSpec>().AddParameters(user.Email, user.Password);
-            return await UserService.ExistsAsync(spec);
+            var sucess = await UserService.ExistsAsync(spec);
+            var claims = new List<Claim>()
+            {
+                new Claim("client-id", "123")
+            };
+
+            return (sucess, claims);
         }
 
         public override void Register(FluentAuthenticationUser fluentAuthenticationUser)

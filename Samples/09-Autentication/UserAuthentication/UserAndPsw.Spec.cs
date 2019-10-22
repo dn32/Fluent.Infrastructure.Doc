@@ -1,5 +1,4 @@
 ﻿using System.Linq;
-using Autentication.Extension;
 using Fluent.Architecture.Specifications;
 
 namespace Authentication.UserAuthentication
