@@ -20,14 +20,17 @@ namespace Authentication
             var jsonSerializerSettings = new JsonSerializerSettings { ContractResolver = new CamelCasePropertyNamesContractResolver() };
             var jwtInfo = new FluentJwtInfo
             {
-                Audience = "Maxima",
-                Issuer = "Maxima",
-                SecretKey = System.Text.Encoding.ASCII.GetString(new byte[] { 0x6d, 0x61, 0x78, 0x69, 0x6d, 0x61, 0x73, 0x69, 0x73, 0x74, 0x65, 0x6d, 0x61, 0x73, 0x40, 0x32, 0x30, 0x31, 0x38 })
+                Audience = "Fluent",
+                Issuer = "Fluent",
+                SecretKey = "My Secret Key here" // Todo - Attention! Change it
             };
 
             /* 1. Startup Architecture */
             services
-                .AddMvc()
+                .AddMvc(options =>
+                {
+                    options.Filters.Add(new FluentAuthorizationFilter());
+                })
                 .AddNewtonsoftJson(options => options.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver())
                 .AddFluentArchitecture(jsonSerializerSettings)
                 .UseEntityFramework()

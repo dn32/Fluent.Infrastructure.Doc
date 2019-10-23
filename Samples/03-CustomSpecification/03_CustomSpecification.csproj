@@ -7,10 +7,10 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Update="Fluent.Architecture.Core" Version="2.0.1.3-beta102227" />
-    <PackageReference Update="Fluent.Architecture.Core.Doc" Version="2.0.1.3-beta102227" />
-    <PackageReference Update="Fluent.Architecture.EntityFramework" Version="2.0.1.3-beta102227" />
-    <PackageReference Update="Fluent.Architecture.EntityFramework.SqLite" Version="2.0.1.3-beta102227" />
+    <PackageReference Update="Fluent.Architecture.Core" Version="2.0.1.3-beta102334" />
+    <PackageReference Update="Fluent.Architecture.Core.Doc" Version="2.0.1.3-beta102334" />
+    <PackageReference Update="Fluent.Architecture.EntityFramework" Version="2.0.1.3-beta102334" />
+    <PackageReference Update="Fluent.Architecture.EntityFramework.SqLite" Version="2.0.1.3-beta102334" />
   </ItemGroup>
 
 </Project>

@@ -13,14 +13,15 @@ namespace Authentication.UserAuthentication
 
         public override async Task<(bool sucess, List<Claim> claims)> AuthenticateAsync(FluentAuthenticationUser user)
         {
-            var spec = CreateSpec<UserAndPswSpec>().AddParameters(user.Email, user.Password);
-            var sucess = await UserService.ExistsAsync(spec);
+            //var spec = CreateSpec<UserAndPswSpec>().AddParameters(user.Email, user.Password);
+            //var sucess = await UserService.ExistsAsync(spec);
+            var sucess = (user.Name == "admin");
             var claims = new List<Claim>()
             {
-                new Claim("client-id", "123")
+                new Claim("client-id", user.Email)
             };
 
-            return (sucess, claims);
+            return await Task.FromResult((sucess, claims));
         }
 
         public override void Register(FluentAuthenticationUser fluentAuthenticationUser)
