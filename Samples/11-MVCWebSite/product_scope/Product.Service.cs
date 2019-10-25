@@ -22,7 +22,7 @@ namespace MVCWebSite.product_scope
 
         public async Task UpdateProductsValue(decimal increasePercentage)
         {
-            var allProducts = await base.ListAsync(CreateSpec<FluentAllSpec<Product>>(), new FluentPagination(0, true, int.MaxValue));
+            var allProducts = await base.ListSelectAsync(CreateSpec<FluentAllSpec<Product>>(), new FluentPagination(0, true, int.MaxValue));
             allProducts.ForEach(x => x.Value *= increasePercentage);
             await base.UpdateRangeAsync(allProducts);
         }

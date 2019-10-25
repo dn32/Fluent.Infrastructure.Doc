@@ -8,22 +8,21 @@ using System.Threading.Tasks;
 namespace CustomSpecification
 {
     [Route("/api/[Controller]/[Action]")]
-    public class UserController : FluentController<User>
+    public class UserController : FluentAPIController<User>
     {
+        //[HttpPost]
+        //[Route("/api/[controller]/ListByFilter")]
+        //[Description("Get a paginated list of items based on filters")]
+        //public virtual async Task<DefaultPaginationResult> ListByFilterPost([FromBody] Filter[] filters)
+        //{
+        //    return await InternalListByFilterAsync(filters);
+        //}
 
-        [HttpPost]
-        [Route("/api/[controller]/ListByFilter")]
-        [Description("Get a paginated list of items based on filters")]
-        public virtual async Task<DefaultPaginationResult> ListByFilterPost([FromBody] Filter[] filters)
-        {
-            return await InternalListByFilterAsync(filters);
-        }
-
-        private async Task<DefaultPaginationResult> InternalListByFilterAsync([FromBody] Filter[] filters)
-        {
-            var spec = CreateSpec<FluentFilterSpec<User>>().SetParameter(filters, isList: true);
-            return await ResultAsync(Service.ListAsync(spec), LastRequestPagination);
-        }
+        //private async Task<DefaultPaginationResult> InternalListByFilterAsync([FromBody] Filter[] filters)
+        //{
+        //    var spec = CreateSpec<FluentFilterSpec<User>>().SetParameter(filters, isList: true);
+        //    return await ResultAsync(await Service.ListSelectAsync(spec), LastRequestPagination);
+        //}
     }
 
     //public class FluentFilterSpec<T> : FluentSpecification<T> where T : FluentEntity

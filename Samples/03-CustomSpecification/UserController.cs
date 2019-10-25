@@ -32,10 +32,10 @@ namespace CustomSpecification
         }
 
         [Description("List all users")]
-        public async Task<List<User>> List()
+        public async Task<List<object>> List()
         {
             var spec = CreateSpec<FluentAllSpec<User>>();
-            return await Service.ListAsync(spec);
+            return await Service.ListSelectAsync(spec);
         }
 
         [HttpPost]
