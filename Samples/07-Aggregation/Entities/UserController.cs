@@ -11,13 +11,13 @@ namespace Composition.Entities
     public class UserController : FluentAPIController<User>
     {
         [HttpGet]
-        public async Task<List<object>> GetCustom([FromQuery] string fields)
+        public async Task<List<User>> GetCustom([FromQuery] string fields)
         {
             if (fields is null) { throw new ArgumentNullException(nameof(fields)); }
 
             var properties = fields.Split(",");
             var spec = CreateSpec<FluentDynamicSpec<User>>().SetParameters(properties, true);
-            var list = await Service.ListSelectAsync(spec);
+            var list = await Service.ListAsync(spec);
             return list;
         }
     }

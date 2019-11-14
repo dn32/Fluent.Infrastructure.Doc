@@ -15,7 +15,7 @@ namespace MVCWebSite.base_elements
         {
             var pagination = new FluentPagination(currentPage, true, itemsPerPage);
             var spec = CreateSpec<FluentAllSpec<T>>().SetParameter(isList: true);
-            var list = await Service.ListSelectAsync(spec, pagination);
+            var list = await Service.ListAsync(spec, pagination);
             ViewBag.pagination = pagination;
             return View(list);
         }

@@ -25,17 +25,23 @@ namespace CustomSpecification
             return await Service.ListAsync(spec);
         }
 
-        public async Task<List<UserNameAndAge>> ListAdults()
+        public async Task<List<UserNameAndAge>> ListAdultsByViewModel()
         {
-            var spec = CreateSpec<NameAndAgeOfAdultsSpec>();
+            var spec = CreateSpec<NameAndAgeOfAdultsViewModelSpec>();
             return await Service.ListSelectAsync(spec);
         }
 
+        public async Task<List<User>> ListAdults()
+        {
+            var spec = CreateSpec<NameAndAgeOfAdultsSpec>().SetParameters(new string[] { nameof(CustomSpecification.User.Name), nameof(CustomSpecification.User.Age) }, true);
+            return await Service.ListAsync(spec);
+        }
+
         [Description("List all users")]
-        public async Task<List<object>> List()
+        public async Task<List<User>> List()
         {
             var spec = CreateSpec<FluentAllSpec<User>>();
-            return await Service.ListSelectAsync(spec);
+            return await Service.ListAsync(spec);
         }
 
         [HttpPost]

@@ -6,24 +6,10 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\Fluent.Architecture\Fluent.Architecture.Core.Doc\Fluent.Architecture.Core.Doc.csproj" />
-    <ProjectReference Include="..\..\..\Fluent.Architecture\Fluent.Architecture.EntityFramework.PostgreSQL\Fluent.Architecture.EntityFramework.PostgreSQL.csproj" />
-    <ProjectReference Include="..\..\..\Fluent.Architecture\Fluent.Architecture.EntityFramework\Fluent.Architecture.EntityFramework.csproj" />
-    <ProjectReference Include="..\..\..\Fluent.Architecture\Fluent.Architecture\Fluent.Architecture.Core.csproj" />
-  </ItemGroup>
-
-  <!--<ItemGroup>
-    <PackageReference Update="Fluent.Architecture.Core" Version="2.0.1.3-beta101816" />
-    <PackageReference Update="Fluent.Architecture.Core.Doc" Version="2.0.1.3-beta101816" />
-    <PackageReference Update="Fluent.Architecture.EntityFramework" Version="2.0.1.3-beta101816" />
-    <PackageReference Update="Fluent.Architecture.EntityFramework.SqLite" Version="2.0.1.3-beta101816" />
-  </ItemGroup>-->
-
-  <ItemGroup>
-    <PackageReference Update="Fluent.Architecture.Core" Version="2.0.1.3-beta102542" />
-    <PackageReference Update="Fluent.Architecture.Core.Doc" Version="2.0.1.3-beta102542" />
-    <PackageReference Update="Fluent.Architecture.EntityFramework" Version="2.0.1.3-beta102542" />
-    <PackageReference Update="Fluent.Architecture.EntityFramework.SqLite" Version="2.0.1.3-beta102542" />
+    <PackageReference Update="Fluent.Architecture.Core" Version="2.0.1.7-beta01" />
+    <PackageReference Update="Fluent.Architecture.Core.Doc" Version="2.0.1.7-beta01" />
+    <PackageReference Update="Fluent.Architecture.EntityFramework" Version="2.0.1.7-beta01" />
+    <PackageReference Update="Fluent.Architecture.EntityFramework.SqLite" Version="2.0.1.7-beta01" />
   </ItemGroup>
 
 </Project>
